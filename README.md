@@ -1,40 +1,130 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# Cognitive Skills Student Performance Dashboard
 
-## Getting Started
+[Live Demo on Vercel](https://cognitive-skills-stude-git-2e3400-priyanka-ss-projects-f232d9c7.vercel.app)  
+[GitHub Repository](https://github.com/Priyas0824/Cognitive-Skills-Student-Performance-Dashboard)
 
-First, run the development server:
+---
 
+## Project Overview
+
+This project aims to **analyze cognitive skills and predict student performance** using a synthetic student dataset. It combines **data analysis, machine learning, and interactive dashboards** to provide actionable insights into learning patterns.  
+
+Key goals:  
+- Understand correlations between cognitive skills and assessment performance.  
+- Predict assessment scores using a simple ML model.  
+- Cluster students into learning personas for targeted interventions.  
+- Visualize insights in a **Next.js dashboard** for easy exploration.
+
+---
+
+## Dataset
+
+The dataset contains synthetic student records with the following fields:
+
+| Field                | Description                                |
+|---------------------|--------------------------------------------|
+| `student_id`         | Unique student identifier                  |
+| `name`               | Student name                               |
+| `class`              | Student's class/grade                      |
+| `comprehension`      | Cognitive skill score – comprehension     |
+| `attention`          | Cognitive skill score – attention         |
+| `focus`              | Cognitive skill score – focus             |
+| `retention`          | Cognitive skill score – retention         |
+| `assessment_score`   | Actual assessment score                   |
+| `engagement_time`    | Time spent engaging with learning material|
+
+---
+
+## Data Analysis & Insights
+
+- **Correlation Analysis:**  
+  Strong positive correlations were observed between comprehension, attention, focus, retention, and assessment scores.  
+  This indicates that higher cognitive skills generally lead to better performance.  
+
+- **Clustering (Learning Personas):**  
+  Students were grouped into clusters representing different learning styles:  
+  - High performers with balanced skills  
+  - Students with strong attention but low retention  
+  - Students needing improvement across multiple skills  
+
+- **Key Findings:**  
+  - Engagement time alone does not guarantee high assessment scores.  
+  - Retention and comprehension have the highest impact on performance.  
+  - Personalized learning strategies can improve overall outcomes.
+
+---
+
+## Machine Learning
+
+- **Model:** Linear Regression to predict `assessment_score`.  
+- **Performance:**  
+  - Achieved a good correlation between predicted and actual scores.  
+  - Useful for identifying students at risk and suggesting targeted support.  
+
+---
+
+## Dashboard Features
+
+Built with **Next.js**, the dashboard provides:  
+- **Overview Stats:** Average scores and cognitive skill summaries.  
+- **Charts:**  
+  - Bar chart: Skill vs assessment score  
+  - Scatter plot: Attention vs performance  
+  - Radar chart: Student profile visualization  
+- **Student Table:** Searchable and sortable student records.  
+- **Insights Section:** Highlights key patterns and clusters.
+
+---
+
+## Tech Stack
+
+- **Frontend & Dashboard:** Next.js, React, Chart.js  
+- **Data Analysis & ML:** Python, Pandas, Scikit-learn, Matplotlib, Seaborn  
+- **Deployment:** Vercel for public access  
+
+---
+
+## Setup Instructions
+
+1. **Clone the repo:**
 ```bash
+git clone https://github.com/Priyas0824/Cognitive-Skills-Student-Performance-Dashboard.git
+cd Cognitive-Skills-Student-Performance-Dashboard
+Install dependencies for Next.js dashboard:
+
+bash
+Copy code
+npm install
+Run the dashboard locally:
+
+bash
+Copy code
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Open http://localhost:3000 to view the dashboard.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Jupyter Notebook:
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+Open notebook/Student_Performance_Analysis.ipynb for data analysis and ML workflow.
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+Run all cells to reproduce analysis, model training, and predictions.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+📂 Project Structure
+bash
+Copy code
+├─ dashboard/             # Next.js frontend
+├─ notebook/              # Jupyter Notebook with analysis & ML
+├─ data/                  # Synthetic dataset CSV
+├─ README.md
+**Highlights:**
+End-to-end data analysis → ML → dashboard workflow.
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Actionable insights for personalized learning interventions.
 
-## Learn More
+Interactive visualizations for skill-performance analysis.
 
-To learn more about Next.js, take a look at the following resources:
+Publicly deployed and accessible on Vercel.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
+**Links**
+Live Dashboard: Vercel Link
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+GitHub Repo: https://github.com/Priyas0824/Cognitive-Skills-Student-Performance-Dashboard
